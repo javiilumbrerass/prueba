@@ -1,0 +1,1143 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "letra1";
+  src: url(../font/Lemon\ Tea.ttf);
+}
+@font-face {
+  font-family: "letra2";
+  src: url(../font/AquireBold-8Ma60.otf);
+}
+@font-face {
+  font-family: "letra3";
+  src: url(../font/unispace\ rg.ttf);
+}
+body {
+  background: rgb(74, 74, 74);
+  background: linear-gradient(
+    0deg,
+    rgba(74, 74, 74, 1) 0%,
+    rgba(6, 6, 6, 1) 50%
+  );
+  display: flex-end;
+  background-attachment: fixed;
+}
+
+/* Menu */
+
+header {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "letra2";
+}
+nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 50px;
+  margin-left: 10px;
+}
+.bar-btn {
+  font-size: 25px;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.nav-menu {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.95);
+  text-align: center;
+  transition: all 0.5s;
+}
+.nav-menu li {
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all 0.5s;
+}
+.nav-menu li a {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.nav-menu li a.active,
+.nav-menu li a:hover {
+  color: yellow;
+  transition: 0.3s;
+}
+#check {
+  display: none;
+}
+#check:checked ~ .nav-menu {
+  height: 100vh;
+}
+#check:checked ~ .nav-menu li {
+  display: block;
+}
+
+/* ----------------------------------------------- */
+
+/* Video */
+
+video {
+  position: fixed;
+
+  min-height: 100%;
+  min-width: 100%;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+
+  z-index: -1;
+
+  filter: grayscale(100%);
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+
+/* ----------------------------------- */
+
+/* Titulo */
+
+.separacion {
+  width: 50px;
+}
+
+.container span {
+  top: 250px;
+  position: relative;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "letra2";
+  cursor: pointer;
+  transition: all 3;
+  letter-spacing: 2px;
+}
+
+.container span::before {
+  content: var(--l);
+  position: absolute;
+  transform: scale(2);
+  filter: blur(15px);
+}
+
+.container span::after {
+  position: absolute;
+  top: 15%;
+  filter: blur(30px);
+  transform: rotateX(50deg);
+}
+
+.container span:hover {
+  filter: contrast(0%);
+}
+
+.container span:nth-child(1) {
+  color: yellow;
+}
+
+.container span:nth-child(2) {
+  color: yellow;
+}
+
+.container span:nth-child(3) {
+  color: yellow;
+}
+
+.container span:nth-child(4) {
+  color: yellow;
+}
+
+.container span:nth-child(5) {
+  color: yellow;
+}
+
+.container span:nth-child(6) {
+  color: yellow;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/* PAGINA DE JUEG0S */
+
+.contenedor {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+.contenedor .box {
+  position: relative;
+  width: 300px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 40px;
+  transition: 1s;
+}
+.contenedor .box:hover {
+  transform: translateX(20px);
+}
+.contenedor .box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+.contenedor .box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, #ffb039, #ff7b00);
+  filter: blur(30px);
+}
+.contenedor .box:nth-child(2):before,
+.contenedor .box:nth-child(2):after {
+  background: linear-gradient(315deg, #fdff6a, #e5ff00);
+}
+.contenedor .box:nth-child(3):before,
+.contenedor .box:nth-child(3):after {
+  background: linear-gradient(45deg, #ff8787, #ff0000);
+}
+.contenedor .box:nth-child(4):before,
+.contenedor .box:nth-child(4):after {
+  background: linear-gradient(315deg, #ec5fff, #f700ff);
+}
+.contenedor .box:nth-child(5):before,
+.contenedor .box:nth-child(5):after {
+  background: linear-gradient(315deg, #03c4f4, #4400ff);
+}
+.contenedor .box:nth-child(6):before,
+.contenedor .box:nth-child(6):after {
+  background: linear-gradient(315deg, #95ff7b, #7bff00);
+}
+
+.contenedor .box .content {
+  position: relative;
+  z-index: 10;
+  padding: 20px 40px;
+}
+.contenedor .box .content a {
+  display: inline-block;
+  font-size: 16px;
+  color: black;
+  background: white;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 10px;
+}
+.contenedor .box .content img {
+  width: 200px;
+  height: 200px;
+}
+/* ----------------------------------------------------------------------------------------------- */
+
+/* BOTÓN PARTICIPA */
+
+.boton{
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: "letra2";
+  border-radius: 10px;
+}
+.boton:hover{
+  color: black;
+  transition: 1.0s;
+  border: 2px black solid;
+}
+.boton span{
+  position: absolute;
+  display: block;
+  border-radius: 10px;
+}
+#part1{
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,black,black);
+}
+.boton:hover #part1{
+  left: 100%;
+  transition: 1.5s;
+}
+
+#part3{
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,black,black);
+}
+.boton:hover #part3{
+  right: 100%;
+  transition: 1.5s;
+}
+
+#part2{
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,black,black);
+}
+.boton:hover #part2{
+  top: 100%;
+  transition: 1.5s;
+}
+
+#part4{
+  bottom: -100%;
+  left: 0;
+  width:2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,black,black);
+}
+.boton:hover #part4{
+  bottom: 100%;
+  transition: 1.5s;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+/* INFO JUEGOS */
+
+.titulo {
+  color: white;
+  font-family: "letra2";
+  text-align: center;
+  font-size: 40px;
+  padding: 20px 0px 20px 0px;
+}
+.fondo_valorant {
+  background: linear-gradient(transparent 15%, black 80%),
+    url(../img/wall_valorant.jpg);
+  background-position: center top;
+  background-attachment: local;
+  height: 900px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fondo_csgo {
+  background: linear-gradient(transparent 15%, black 80%),
+    url(../img/wall_csgo.jpg);
+  background-position: center top;
+  background-attachment: local;
+  height: 900px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.fondo_fifa {
+  background: linear-gradient(transparent 15%, black 80%),
+    url(../img/wall_fifa22.jpg);
+  background-position: center top;
+  background-attachment: local;
+  height: 900px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.fondo_rocket {
+  background: linear-gradient(transparent 15%, black 50%),
+    url(../img/wall_rocket.jpg);
+  background-position: center top;
+  background-attachment: local;
+  height: 900px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.fondo_fortnite {
+  background: linear-gradient(transparent 15%, black 80%),
+    url(../img/wall_fortnite.jpg);
+  background-position: center top;
+  background-attachment: local;
+  height: 900px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.fondo_lol {
+  background: linear-gradient(transparent 15%, black 80%),
+    url(../img/wall_lol.jpg);
+  background-position: center top;
+  background-attachment: local;
+  height: 900px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.texto_juego {
+  position: relative;
+  width: 600px;
+  height: auto;
+  margin: auto;
+  padding: 15px;
+  background: black;
+  background: rgba(0, 0, 0, 0.95);
+  color: white;
+  border-radius: 10px;
+  border-bottom: none;
+  font-family: sans-serif;
+  font-weight: 800;
+}
+.juego_izquierda {
+  min-width: 50%;
+  min-height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.juego_derecha {
+  min-width: 50%;
+  min-height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card_infojuegos {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+}
+.card_infojuegos .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.card_infojuegos .front {
+  transform: perspective(600px) rotateX(0deg);
+  box-shadow: 0px 5px 10px white;
+  display: flex;
+}
+.card_infojuegos .front img {
+  position: absolute;
+  left: 10%;
+  bottom: 5%;
+  width: 80%;
+  object-fit: cover;
+}
+.card_infojuegos .front h3 {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  background: black;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: "letra2";
+}
+.card_infojuegos .back h3 {
+  font-family: "letra2";
+}
+.card_infojuegos .back {
+  transform: perspective(600px) rotateX(180deg);
+  box-shadow: 0px 5px 10px white;
+  padding: 0px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.15);
+  opacity: 0.8;
+  font-family: sans-serif;
+}
+.card_infojuegos .back .link {
+  border-top: 1px solid white;
+  height: 50px;
+  line-height: 50px;
+}
+.card_infojuegos .back .link a {
+  color: white;
+  text-decoration: none;
+  font-family: "letra2";
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.card_infojuegos .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+.card_infojuegos .back p {
+  letter-spacing: 1px;
+  padding: 20px;
+}
+.card_infojuegos:hover .front {
+  transform: perspective(600px) rotateX(180deg);
+}
+.card_infojuegos:hover .back {
+  transform: perspective(600px) rotateX(360deg);
+}
+
+/* SLIDER SPONSORS */
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 13));}
+}
+
+.slider {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  height: 100px;
+  margin: auto;
+  overflow:hidden;
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+} 
+
+.slide::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slide::before {
+    left: 0;
+    top: 0;
+}
+  
+  .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+  }
+  
+  .slide {
+    height: 100px;
+    width: 250px;
+    margin-left: 50px;
+  }
+
+/* -------------------------------------------------------------------------- */
+
+/* PÁGINA DE INSCRIPCIÓN */
+
+.padre_inscripcion {
+  font-family: "letra2";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+form {
+  height: auto;
+  background: rgba(0, 0, 0, 0.95);
+  padding: 40px 0;
+  box-shadow: 0 0 10px 0px white;
+  width: auto;
+  border-radius: 50px;
+}
+h1 {
+  text-align: center;
+  font-weight: 700;
+  color: white;
+}
+.form {
+  width: 100%;
+  margin: auto;
+}
+form .grupo {
+  position: relative;
+  margin: 45px;
+}
+.seccion_form {
+  background: none;
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid white;
+}
+.seccion_form:focus {
+  outline: none;
+  color: white;
+}
+.nombre_seccion {
+  color: #5e5d5d;
+  font-size: 16px;
+  position: absolute;
+  text-decoration: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.5s ease all;
+  pointer-events: none;
+}
+.seccion_form:focus ~ .nombre_seccion,
+.seccion_form:valid ~ .nombre_seccion {
+  top: -14px;
+  font-size: 12px;
+  color: #fffc00;
+}
+.barra {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.barra::before {
+  content: "";
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to right, #ffffff, #fffc00);
+  transition: 0.3s ease width;
+  left: 0;
+}
+.seccion_form:focus ~ .barra::before {
+  width: 100%;
+}
+button {
+  font-family: "letra3";
+  background: linear-gradient(to right, #ffffff, #fffc00);
+  border: none;
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  color: black;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 1.5s ease-in-out;
+}
+.link {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.link:hover {
+  color: #fffc00;
+}
+.logear {
+  color: white;
+  text-align: center;
+  padding: 30px 0px 30px 0px;
+}
+.condiciones {
+  color: white;
+  text-align: center;
+  padding: 0px 30px 0px 30px;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+/* PAGINA NOSOTROS */
+
+.padre_nosotros{
+  width: 100%;
+  height: auto;
+}
+.titulo_nosotros{
+  display: flex;
+  width: 660px;
+  height: 50px;
+  color: white;
+  font-size: 50px;
+  font-family: "letra2";
+
+  margin: auto;
+
+  overflow: hidden;
+}
+.somos_padre{
+  list-style: none;
+  padding-left: 10px;
+  animation: cambiar 5s infinite;  
+}
+.somos_padre, .somos_hijo{
+  margin: 0;
+}
+.pure_gaming{
+  color: yellow;
+}
+@keyframes cambiar {
+  
+  0%{margin-top: 0;}  
+
+  25%{margin-top: -50px;}  
+
+  50%{margin-top: -100px;}  
+
+  75%{margin-top: -150px;}  
+}
+.texto_nosotros{
+  color: white;
+
+  font-family: sans-serif;
+  font-weight: 800;
+  width: 100%;
+  width: 80%;
+  margin: 0px 10% 0px 10%;
+  padding: 50px;
+}
+
+/* PAGINA DE EVENTOS */
+
+.caja_evento{
+  border: 10px double white;    
+  color: white;
+  font-family: "letra2";
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px; 
+}
+.primera{
+  top: 200px;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.segunda{
+  top: 1300px;
+  background-color: rgba(0, 255, 0, 0.5);
+}
+.tercera{
+  top: 2300px;
+  background-color: rgba(0, 0, 255, 0.5);
+}
+.cuarta{
+  top: 3450px;
+  background-color: rgba(255, 0, 255, 0.5);
+}
+.quinta{
+  top: 4500px;
+  background-color: rgba(255, 255, 0, 0.5);
+}
+.img_eventos{
+  width: 100%;
+  border-radius: 8px;
+}
+.datos{
+  width: 100%;  
+}
+.datos h3{
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+}
+.datos p{
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px 0px 0px;
+}
+.datos{
+  width: 100%;
+}
+.caja_evento h4{
+  margin-bottom: 10px;
+}
+.caja_evento h2{
+  margin-bottom: 10px;
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+/* TARJETAS NOSOTROS */
+
+.container_nosotros {  
+  width: 100%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_nosotros {  
+  height: 280px;
+  width: 200px;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 20px gray;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card_nosotros:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card_nosotros:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card_nosotros:hover ~ .card_nosotros {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: gray;
+  font-weight: 800;
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+.card_nosotros img{
+  position: absolute;
+  top: 92px;    
+  width: 200px;
+  max-height: 200px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+} 
+
+/* ------------------------------------------------------------------------------------------ */
+
+/* Responsive */
+
+@media screen and (max-width: 1250px) {
+  /* INFO JUEGOS */
+
+  .card_infojuegos {
+    width: 300px;
+    height: 300px;
+  }
+  .texto_juego {
+    width: 300px;
+    height: auto;
+  }
+  .card_infojuegos .back p {
+    font-size: 10px;
+  }
+  .card_infojuegos .back h3 {
+    font-size: 13px;
+  }
+  .card_infojuegos .back a {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* INFO JUEGOS */
+
+  .fondo_valorant {
+    display: grid;
+    height: 100%;
+  }
+  .fondo_csgo {
+    display: grid;
+    height: 100%;
+  }
+  .fondo_fortnite {
+    display: grid;
+    height: 100%;
+  }
+  .fondo_lol {
+    display: grid;
+    height: 100%;
+  }
+  .fondo_rocket {
+    display: grid;
+    height: 100%;
+  }
+  .fondo_fifa {
+    display: grid;
+    height: 100%;
+  }
+  .slider {
+    margin-top: 50px;  
+  } 
+  .juego_derecha{
+    min-height: 0px;
+    margin-top: 50px;
+  }
+  .juego_izquierda{
+    min-height: 0px;
+    margin-top: 50px;
+  }
+
+  /* TARJETAS NOSOTROS */
+
+  .container_nosotros{
+    flex-wrap: wrap;
+    margin-bottom: 50PX;
+  }
+
+  /* PAGINA NOSOTROS */
+
+  .titulo_nosotros{   
+    width: 400px;
+    height: 30px;    
+    font-size: 30px;   
+  }
+  @keyframes cambiar {
+  
+    0%{margin-top: 0;}  
+  
+    25%{margin-top: -30px;}  
+  
+    50%{margin-top: -60px;}  
+  
+    75%{margin-top: -90px;}  
+  }
+
+}
+
+@media screen and (max-width:450px){
+  .titulo_nosotros{   
+    width: 280px;
+    height: 20px;    
+    font-size: 20px;   
+  }
+  @keyframes cambiar {
+  
+    0%{margin-top: 0;}  
+  
+    25%{margin-top: -20px;}  
+  
+    50%{margin-top: -40px;}  
+  
+    75%{margin-top: -60px;}  
+  }
+  .texto_nosotros{
+    padding: 15px;
+    margin: 0;
+    font-weight: 800;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+}
+
+@media screen and (min-width: 860px) {
+  /* MENU */
+
+  .logo {
+    margin-left: 20px;
+    width: 70px;
+    margin-top: 15px;
+  }
+  nav {
+    height: 100px;
+  }
+  .bar-btn {
+    display: none;
+  }
+  .nav-menu {
+    position: relative;
+    height: 100px;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 50px;
+  }
+  .nav-menu li {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 20px;
+    transition: none;
+  }
+  .nav-menu li a {
+    font-size: 20px;
+  }
+  .nav-menu li a.ctive,
+  .nav-menu li a:hover {
+    color: yellow;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  /* Menu */
+
+  #check:checked ~ .nav-menu {
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  /* Titulo */
+
+  .container span {
+    top: -70px;
+    font-size: 30px;
+  }
+
+  .separacion {
+    width: 20px;
+  }
+
+  .container span {
+    letter-spacing: 0px;
+  }
+
+  /* INSCRIPCIÓN */
+
+  form {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* INSCRIPCIÓN */
+
+  .seccion_form {
+    display: flex;
+    font-size: 12px;
+  }
+  .nombre_seccion {
+    font-size: 10px;
+    top: 0px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  button {
+    font-size: 14px;
+  }
+  .logear {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .condiciones {
+    font-size: 12px;
+    padding: 0px 10px 0px 10px;
+  }
+  .link {
+    margin-right: 10px;
+  }
+
+  /* Titulo */
+
+  .container span {
+    top: -60px;
+    font-size: 15px;
+  }
+
+  .separacion {
+    width: 10px;
+  }
+
+  .container span {
+    letter-spacing: 0px;
+  }
+
+  /* Menu */
+
+  .logo {
+    width: 40px;
+  }
+
+  /* INFO JUEGOS */
+
+  .titulo {
+    font-size: 20px;
+  }
+  .card_infojuegos {
+    width: 200px;
+    height: 330px;
+    margin: 20px auto 20px auto;
+  }
+  .texto_juego {
+    width: 200px;
+    height: auto;
+    margin: 20px auto 20px auto;
+    font-size: 13px;
+  }
+  .card_infojuegos .back p {
+    font-size: 8px;
+  }
+  .card_infojuegos .back h3 {
+    font-size: 10px;
+  }
+  .card_infojuegos .back a {
+    font-size: 10px;
+  }
+  .card_infojuegos .front h3 {
+    font-size: 10px;
+  }
+  .slider { 
+    margin-top: 50px;      
+  } 
+  .juego_derecha{
+    min-height: 0px;
+    margin-top: 50px;
+  }
+  .juego_izquierda{
+    min-height: 0px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* PAGINA JUEGOS */
+  .card {
+    width: 150px;
+  }
+  .container_cards {
+    margin: 0px 0px;
+  }
+  .card:hover {
+    width: 200px;
+  }
+  .card .cover {
+    height: 150px;
+  }
+  .card .cover img {
+    height: 150px;
+    top: 0px;
+  }
+  .card .description a {
+    padding: 10px 10px;
+    margin-top: 20px;
+    font-size: 10px;
+  }
+}
